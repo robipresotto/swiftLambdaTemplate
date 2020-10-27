@@ -2,7 +2,7 @@
 This project is a template for [swiftLambda](https://github.com/robipresotto/swiftLambda).
 
 ### AWS CloudFormation (Lambda + ApiGateway)
-![alt text](https://github.com/robipresotto/swiftLambdaTemplate/main/CloudFormation/template-designer.png?raw=true)
+![alt text](https://github.com/robipresotto/swiftLambdaTemplate/blob/main/CloudFormation/template-designer.png?raw=true)
 
 ### AWS Lambda Function
 
