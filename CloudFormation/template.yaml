@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::Serverless-2016-10-31'
+
+Resources:
+  myServiceApiGateway:
+    Type: 'AWS::Serverless::Api'
+    Properties:
+      StageName: dev
+  myLambdaFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: provided
+      Timeout: 300
+      CodeUri: s3://swift-lambda-template/swiftLambda.zip
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+            RestApiId:
+              Ref: myServiceApiGateway
+            Path: /hello
+            Method: post
+            RestApiId:
+              Ref: myServiceApiGateway
