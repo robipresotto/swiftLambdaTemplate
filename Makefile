@@ -11,9 +11,8 @@ setup:
 	./Scripts/clean.sh; \
 	./Scripts/save.sh $$projectName $$awsProfile; \
 	./Scripts/builder.sh $(projectName) \
-	./Scripts/cloudFormation.sh $(projectName) $(awsProfile); \
-	./Scripts/deploy.sh $(projectName) $(awsProfile);
-
+	./Scripts/cloudFormation.sh $(projectName) $(awsProfile);
+	
 build:
 	@bash ./Scripts/builder.sh $(projectName);
 

@@ -7,10 +7,8 @@ set -eu
 # Lambda function + ApiGateway endpoint
 #
 
-export PROJECT_NAME="${1}-${2}"
-
-aws s3 mb s3://$PROJECT_NAME --profile $2 && \
-aws s3 cp ".build/lambda/${1}/${1}.zip" "s3://$PROJECT_NAME/${PROJECT_NAME}.zip" && \
+aws s3 mb s3://${1} --profile $2 && \
+aws s3 cp ".build/lambda/${1}/${1}.zip" "s3://${1}/${1}.zip" && \
 
 aws cloudformation create-stack \
                     --stack-name $1 \
