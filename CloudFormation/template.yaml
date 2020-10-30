@@ -15,7 +15,7 @@ Resources:
       Handler: handler.hello
       Runtime: provided
       Timeout: 300
-      CodeUri: s3://swift-lambda-template/swiftLambda.zip
+      CodeUri: s3://swift-lambda-template/swift-lambda-template.zip
       Events:
         ApiEvent:
           Type: Api
