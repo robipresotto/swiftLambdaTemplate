@@ -19,7 +19,4 @@ docker run \
        --volume "$(pwd)/:/src" \
        --workdir "/src/" \
        swift-lambda-builder \
-       scripts/package.sh $1 && \
-
-# 4. Deploy the binary to lambda
-bash scripts/deploy.sh $1 $2
+       scripts/package.sh $1

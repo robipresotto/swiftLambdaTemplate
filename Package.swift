@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "swift-lambda",
   products: [
-    .executable(name: "swiftLambda", targets: ["swift-lambda"]),
+    .executable(name: "swift-lambda-template", targets: ["swift-lambda"]),
   ],
   dependencies: [
     .package(url: "https://github.com/swift-server/swift-aws-lambda-runtime.git", from: "0.1.0"),

@@ -10,6 +10,8 @@ Resources:
   SwiftLambdaFunction:
     Type: 'AWS::Serverless::Function'
     Properties:
+      FunctionName: swift-lambda-template
+      Description: swift-lambda-template SwiftLambda function for api-gateway
       Handler: handler.hello
       Runtime: provided
       Timeout: 300
